@@ -46,14 +46,11 @@ page {
 }
 
 .company-detail {
-    display: flex;
-    align-items: flex-start;
+    flex: 1;
 }
 
 .company {
-    margin-left: 50rpx;
-    margin-right: 10rpx;
+    text-align: center;
     font-size: 32rpx;
     color: #00b38a;
-    float: right;
 }
