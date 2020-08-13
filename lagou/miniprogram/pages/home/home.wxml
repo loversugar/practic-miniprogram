@@ -1,2 +1,20 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<swiper
+ indicator-dots="true"
+ autoplay="true"
+ interval="2000"
+ duration="1000"
+>
+	<block wx:for="{{pictures}}" wx:key="index">
+		<swiper-item>
+			<image class="img" mode="widthFix" src="{{item}}" />
+		</swiper-item>
+	</block>
+
+</swiper>
+
+<scroll-view scroll-y="true">
+	<block wx:for="{{jobs}}" wx:key="id">
+		<recriuting-card class="card-style" job="{{item}}" />
+	</block>
+</scroll-view>
+

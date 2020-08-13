@@ -1,0 +1,59 @@
+page {
+    background-color: #f1f1f1;
+}
+
+.container {
+    margin-top: 10rpx;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    height: 150rpx;
+    border-color: red;
+    border-width: 10rpx;
+}
+
+.job-detail {
+    margin-left: 30rpx;
+}
+
+.job {
+    margin-top: 10rpx;
+}
+
+.jobName {
+    color: #00b38a;
+    font-size: 32rpx;
+}
+
+.publishTime {
+    margin-left: 10rpx;
+    color: #999;
+    font-size: 30rpx;
+}
+
+.time {
+    margin-top: 10rpx;
+}
+
+.salary {
+    color: #fd5f39;
+}
+
+.requirement-detail {
+    margin-left: 10rpx;
+    color: #999;
+    font-size: 26rpx;
+}
+
+.company-detail {
+    display: flex;
+    align-items: flex-start;
+}
+
+.company {
+    margin-left: 50rpx;
+    margin-right: 10rpx;
+    font-size: 32rpx;
+    color: #00b38a;
+    float: right;
+}

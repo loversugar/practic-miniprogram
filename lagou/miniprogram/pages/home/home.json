@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "recriuting-card": "/components/recriuting-card/recriuting-card"
+  }
 }
