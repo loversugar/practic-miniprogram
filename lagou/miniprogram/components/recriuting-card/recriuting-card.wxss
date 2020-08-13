@@ -5,7 +5,6 @@ page {
 .container {
     margin-top: 10rpx;
     background-color: #ffffff;
-    display: flex;
     align-items: center;
     height: 150rpx;
     border-color: red;
@@ -14,6 +13,7 @@ page {
 
 .job-detail {
     margin-left: 30rpx;
+    padding-top: 20rpx;
 }
 
 .job {
@@ -46,14 +46,12 @@ page {
 }
 
 .company-detail {
-    display: flex;
-    align-items: flex-start;
+    float: right;
 }
 
 .company {
-    margin-left: 50rpx;
+    margin-top: 50rpx;
     margin-right: 10rpx;
     font-size: 32rpx;
     color: #00b38a;
-    float: right;
 }

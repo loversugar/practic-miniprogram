@@ -1,4 +1,7 @@
 <view class="container">
+	<view class="company-detail">
+		<view class="company">{{job.company}}</view>
+	</view>
 	<view class="job-detail">
 		<view class="job">
 			<span class="jobName">{{job.jobName}}</span>
@@ -9,8 +12,6 @@
 			<span class="requirement-detail">{{job.experience}} / {{job.education}}</span>
 		</view>
 	</view>
-	<view class="company-detail">
-		<view class="company">{{job.company}}</view>
-	</view>
+
 </view>
 
