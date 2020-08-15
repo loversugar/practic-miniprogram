@@ -5,6 +5,7 @@
  longitude="{{location.longitude}}"
  show-compass="true"
  show-scale="true"
+ subkey="E5KBZ-ZIP3S-V5GOA-6ATYF-GAGGH-JAB5I"
  scale="16"
  bindtap="onBindTap"
  markers="{{markers}}"

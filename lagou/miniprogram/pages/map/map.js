@@ -1,4 +1,6 @@
 // pages/map/map.js
+var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+var qqmapsdk;
 import {CDN_PATH} from '../../config/appConfig';
 Page({
 
@@ -24,6 +26,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    qqmapsdk = new QQMapWX({
+      key: 'E5KBZ-ZIP3S-V5GOA-6ATYF-GAGGH-JAB5I'
+    })
     this.getUserLocation()
   },
 
