@@ -1,18 +1,30 @@
 // pages/map/map.js
+import {CDN_PATH} from '../../config/appConfig';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    location: {
+			latitude: 40.040415,
+			longitude: 116.273511
+    },
+    markers: [{
+      id: 0,
+      iconPath: `${CDN_PATH}/Marker3_Activated@3x.png`,
+      latitude: 40.040415,
+      longitude: 116.273511,
+      width: 30,
+      height: 30
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getUserLocation()
   },
 
   /**
@@ -20,6 +32,46 @@ Page({
    */
   onReady: function () {
 
+  },
+  
+  onBindTap(event) {
+    console.log(event);
+    const latitude = event.detail.latitude;
+    const longitude = event.detail.longitude;
+
+    this.setData({
+      location: {
+        latitude,
+        longitude
+      },
+      markers: [{
+				id: 0,
+				iconPath: `${CDN_PATH}/Marker3_Activated@3x.png`,
+				latitude: latitude,
+				longitude: longitude,
+				width: 30,
+				height: 30
+			}]
+    });
+
+  },
+
+  getUserLocation() {
+    wx.getLocation({
+      type: 'gcj02',
+      altitude: false,
+      success: (result)=>{
+        const {latitude, longitude} = result;
+        this.setData({
+          location: {
+            latitude,
+            longitude
+          }
+        })
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
   },
 
   /**

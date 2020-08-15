@@ -1,0 +1,1 @@
+export const CDN_PATH = 'https://3gimg.qq.com/lightmap/xcx/demoCenter/images';

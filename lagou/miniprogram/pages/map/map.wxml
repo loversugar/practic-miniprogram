@@ -1,2 +1,12 @@
-<!--pages/map/map.wxml-->
-<text>pages/map/map.wxml</text>
+<map
+ show-location="true"
+ class="map"
+ latitude="{{location.latitude}}"
+ longitude="{{location.longitude}}"
+ show-compass="true"
+ show-scale="true"
+ scale="16"
+ bindtap="onBindTap"
+ markers="{{markers}}"
+/>
+
