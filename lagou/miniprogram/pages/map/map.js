@@ -44,21 +44,44 @@ Page({
     const latitude = event.detail.latitude;
     const longitude = event.detail.longitude;
 
-    this.setData({
+    let location = this._getInfoByLatLong(latitude, longitude);
+    console.log('location...');
+    console.log(location);
+
+    
+
+  },
+
+  _getInfoByLatLong(latitude, longitude) {
+
+    qqmapsdk.reverseGeocoder({
       location: {
         latitude,
         longitude
       },
-      markers: [{
-				id: 0,
-				iconPath: `${CDN_PATH}/Marker3_Activated@3x.png`,
-				latitude: latitude,
-				longitude: longitude,
-				width: 30,
-				height: 30
-			}]
-    });
-
+      success: ((res, data) => {
+        this.setData({
+          location: {
+            latitude,
+            longitude
+          },
+          markers: [{
+            id: 0,
+            callout: {
+              content: data.reverseGeocoderResult.formatted_addresses.recommend,
+              display: 'ALWAYS',
+              padding: 10,
+              borderRadius: 2
+            },
+			     	iconPath: `${CDN_PATH}/Marker3_Activated@3x.png`,
+			     	latitude: latitude,
+			     	longitude: longitude,
+			     	width: 30,
+			     	height: 30
+			     }]
+          })
+        }),
+      })
   },
 
   getUserLocation() {
